@@ -2,6 +2,7 @@ package com.jpetstore.tests;
 
 import static org.junit.Assert.assertEquals;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +28,9 @@ public class AccountsPageTest {
 	@Title("Add a new user to store & verify if the new user can login")
 	public void addNewUserToStoreAndVerify() throws InterruptedException {
 	
-		String userName = "irfanserenity";
+		  String generatedString = RandomStringUtils.randomAlphabetic(10);
+		
+		String userName = RandomStringUtils.randomAlphabetic(10);//"irfanserenity";
 		String password= "abc123";
 		String repeatPassword= "abc123";
 		String firstName= "irfan";
